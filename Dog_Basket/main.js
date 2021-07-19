@@ -47,12 +47,12 @@ lightBoxImageWrapper.addEventListener('click', () => {
 });
 
 function triggerShare(e) {
-   const { text } = e.target.dataset;
+   const { text,title } = e.target.dataset;
 
    if (navigator.share) {
       window.navigator.share({
          
-         title: 'Check out these Dogs',
+         title: `Check out these ${title} Dog`,
          text,
          url: 'https://lucky-victory.github.io/Scrimba_Challenge/Dog_Basket'
       }).then(() => {
