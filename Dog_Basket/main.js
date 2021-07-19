@@ -59,7 +59,7 @@ function triggerLightbox(i){
    }
 }
 
-window.navigator.share ? document.body.innerText+='yes' : document.body.innerText+='nah';
+
 lightBoxImageWrapper.addEventListener('click',()=>{
    lightBoxImageWrapper.classList.remove('show')
 });   
