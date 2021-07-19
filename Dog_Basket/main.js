@@ -47,11 +47,11 @@ lightBoxImageWrapper.addEventListener('click', () => {
 });
 
 function triggerShare(e) {
-   const { image, text } = e.target.dataset;
+   const { text } = e.target.dataset;
 
    if (navigator.share) {
-      navigator.share({
-         files: [image],
+      window.navigator.share({
+         
          title: 'Check out these Dogs',
          text,
          url: 'https://lucky-victory.github.io/Scrimba_Challenge/Dog_Basket'
@@ -61,8 +61,8 @@ function triggerShare(e) {
          setTimeout(() => {
             toastElem.classList.remove('showToast');
 
-         },5000)
-      });
+         },5000);
+      }).catch(err => console.log(err));
    }
    else{
    toastElem.textContent='Your system does not support share API. try a newer version of Chromium browser.'
