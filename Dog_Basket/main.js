@@ -1,4 +1,3 @@
-
 const toastElem=document.querySelector('.toast');
  const lightBoxImage = document.querySelector('.lightbox-image')
 const lightBoxImageWrapper = document.querySelector('.lightbox-image-wrapper')
@@ -51,7 +50,7 @@ function triggerShare(e) {
 
    if (navigator.share) {
       window.navigator.share({
-         
+
          title: `Check out these ${title} Dog`,
          text,
          url: 'https://lucky-victory.github.io/Scrimba_Challenge/Dog_Basket'
@@ -66,12 +65,13 @@ function triggerShare(e) {
    }
    else{
    toastElem.textContent='Your system does not support share API. try a newer version of Chromium browser.'
-     toastElem.classList.add('showToast');
+    toastElem.classList.add('showToast');
          setTimeout(() => {
             toastElem.classList.remove('showToast');
 
          },5000);
-  
+
    }
    console.log(image, text);
 }
+
