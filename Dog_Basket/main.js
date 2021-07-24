@@ -72,6 +72,6 @@ function triggerShare(e) {
          },5000);
 
    }
-   console.log(image, text);
+  
 }
 

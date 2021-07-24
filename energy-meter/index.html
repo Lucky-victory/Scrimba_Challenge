@@ -2,29 +2,24 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
-    <title>Energy Meter | Scrimba Challenge </title>
-    <meta name="description" content="Energy meter, from Scrimba's weekly web dev challenge" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+  <title>Energy Meter | Scrimba Challenge </title>
+  <meta name="description" content="Energy meter, from Scrimba's weekly web dev challenge" />
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 
 <body>
-<div class="wrapper">
-<header class="header">
-  <input type="number" class="energy_input" id="energy_input" placeholder="Buy some Energy" min="0" max="100">
-</header>
-  <div class="energy_guage" id="energy_guage">
-    
-    
-    
+  <div class="wrapper">
+    <header class="header">
+      <label for="energy_input">Enter Energy Percent:</label>
+      <input type="number" class="energy_input" id="energy_input" placeholder="0 - 100" >
+    </header>
+    <div class="energy_guage" id="energy_guage">
+    </div>
   </div>
-  
-  
-</div>
-
-
-<script src="./main.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./main.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
 </html>
