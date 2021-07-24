@@ -38,7 +38,7 @@ function changeBgColor(val){
 
       var data = google.visualization.arrayToDataTable([
           ['Label', 'Value'],
-          ['Energy', 20]
+          ['Energy', 0]
         ]);
 
       var options = {
