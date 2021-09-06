@@ -28,7 +28,7 @@ class AnalogClock {
     const HOURS = TIME.getHours();
     const MINUTES = TIME.getMinutes();
     const SECONDS = TIME.getSeconds();
-    this.hourElem.style.transform = `rotateZ(${((HOURS/12)*15)}deg)`;
+    this.hourElem.style.transform = `rotateZ(${(HOURS * 30)+((MINUTES * this.step)/12)}deg)`;
     this.minuteElem.style.transform = `rotateZ(${(MINUTES * this.step)}deg)`;
     this.secondsElem.style.transform = `rotateZ(${(SECONDS * this.step)}deg)`;
   }

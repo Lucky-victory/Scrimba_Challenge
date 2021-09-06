@@ -6,7 +6,7 @@
   box-sizing: border-box; 
 }
 html{
-  font-size: 6.5px;
+  font-size: 7px;
 }
 body{
   display: flex;
@@ -16,6 +16,11 @@ body{
   width: 100%;
   background-color: #000;
 }
+img{
+  object-position: top!important;
+  object-fit: cover!important
+}
+
 .wrapper{
   width: 100%;
   min-height: 60rem;
@@ -36,7 +41,7 @@ body{
   left: 50%;
   transform: translate(-50%,-50%);
   overflow: hidden;
-  background-color: #005;
+  background-color: #000;
 }
 .medium-photo{
   width: 15rem;
@@ -101,24 +106,23 @@ top: 50%;
 .middle-photo img{
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-position: center!important;
 }
 .medium-photo img,.small-photo img{
     width: 100%;
   height: 100%;
-  object-fit:contain;
+  
 }
-@media all and (min-width:600px){
+@media all and (min-width:500px){
   html{
     font-size:9px ;
   }
 }
 @media all and (min-width:900px){
   html{
-    font-size:11px ;
+    font-size:14px ;
   }
 }
-
 
 
 .clock-container {
@@ -127,7 +131,8 @@ top: 50%;
   height: 100%;
   top: 0;
   left: 0;
-  background: #222;
+  background: #FFFA url('./images/clock.png') no-repeat center/cover;
+  
   z-index: 2;
   border-radius: inherit;
   overflow: hidden;
@@ -139,8 +144,8 @@ top: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   background: #42445A;
   z-index: 5;
@@ -172,16 +177,16 @@ top: 50%;
 .hour-hand:before {
   content: "";
   position: absolute;
-  top: -28%;
+  top: -20%;
   left: 50%;
   transform: translateX(-50%);
-  border: 12px solid transparent;
+  border: 0.875rem solid transparent;
   border-bottom-color: var(--hour-col);
   border-radius: 6px
 }
 
 .minute-hand {
-  --minute-col: #02673F;
+  --minute-col: #CC680C;
   width: 0.5rem;
   height: 45%;
   left: 50%;
@@ -196,18 +201,18 @@ top: 50%;
 .minute-hand:before {
   content: "";
   position: absolute;
-  top: -15%;
+  top: -1rem;
   left: 50%;
   transform: translateX(-50%);
-  border: 8px solid transparent;
+  border: 0.625rem solid transparent;
   border-bottom-color: var(--minute-col);
   border-radius: 5px
 }
 
 .seconds-hand {
-  --seconds-col: #981C03;
+  --seconds-col: #A60E4F;
   width: 0.30rem;
-  height: 50%;
+  height: 60%;
   left: 50%;
   transform: translateX(-50%);
   top: 2%;
@@ -220,10 +225,10 @@ top: 50%;
 .seconds-hand:before {
   content: "";
   position: absolute;
-  top: -12%;
+  top: -0.875rem;
   left: 50%;
   transform: translateX(-50%);
-  border: 8px solid transparent;
+  border: 0.5rem solid transparent;
   border-bottom-color: var(--seconds-col);
   border-radius: 5px
 }
